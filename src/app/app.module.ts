@@ -4,8 +4,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
 import {HomeComponent} from "./home/home.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {QuoteService} from "./quote.service";
 
 
 @NgModule({
@@ -16,10 +17,10 @@ import {HomeComponent} from "./home/home.component";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [HttpClient, QuoteService],
   bootstrap: [AppComponent, HomeComponent]
 })
 export class AppModule { }

@@ -1,4 +1,14 @@
-<p>
-  home works!
-  really
-</p>
+<div class="quote">
+  <div class="container">
+    <div class="quote__wrap">
+      <div class="quote__inner">
+        <blockquote class="blockquote">
+          <h1>{{qotd?.quote?.body}}</h1>
+          <footer class="blockquote-footer">{{qotd?.quote?.author}}</footer>
+        </blockquote>
+        <button (click)="changeQuote()" type="button" class="btn btn-pill btn-primary"><i class="fa fa-repeat"></i> Get another</button>
+      </div>
+    </div>
+  </div>
+</div>
+
